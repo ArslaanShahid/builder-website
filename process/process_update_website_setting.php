@@ -26,7 +26,7 @@ if (count($errors)==0){
     try{
         $setting->update_header_info();
         $msg = "Header Settings, Updated";
-        $_SESSION['msg'] = $msg;
+        $_SESSION['success'] = $msg;
         header("Location:../admin/header_setting.php");
     }
 catch(Exception $ex){
@@ -36,7 +36,7 @@ catch(Exception $ex){
 }
 }
 else {
-    $_SESSION ['errors'] = 'Check Your Errors';
+    $_SESSION ['error'] = 'Check Your Errors';
     $_SESSION ['errors'] = $errors;
     header("Location:../admin/header_setting.php");
 
