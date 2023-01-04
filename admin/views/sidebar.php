@@ -3,9 +3,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas fa-tasks"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Graduate Student</div>
+                <div class="sidebar-brand-text mx-3">Builder Admin Panel</div>
             </a>
 
             <!-- Divider -->
@@ -38,6 +38,7 @@
                         <a class="collapse-item" href="header_setting.php">Header Setting</a>
                         <a class="collapse-item" href="footer_setting.php">Footer Setting</a>
                         <a class="collapse-item" href="about_us_page_setting.php">About Us Page Setting</a>
+                        <a class="collapse-item" href="services_setting.php">Services Setting</a>
 
                     </div>
                 </div>
@@ -81,6 +82,19 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseemp" aria-expanded="true" aria-controls="collapseemp">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Manage Employee</span>
+                </a>
+                <div id="collapseemp" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="add_admin.php">Add Employee</a>
+                        <a class="collapse-item" href="manage_admin.php">Manage Employee</a>
+                       
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecontact" aria-expanded="true" aria-controls="collapsecontact">
                     <i class="fas fa-fw fa-comments"></i>
                     <span>User's Queries</span>
@@ -103,7 +117,7 @@
             <!-- Sidebar Message -->
             <div class="sidebar-card">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
-                <p class="text-center mb-2"><strong>SS Graduate Service </strong></p>
+                <p class="text-center mb-2"><strong>Admin </strong></p>
             </div>
 
         </ul>
