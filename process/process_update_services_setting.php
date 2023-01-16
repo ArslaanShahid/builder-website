@@ -3,6 +3,8 @@ session_start();
 require_once '../models/Services.php';
 $errors =[];
 $services = new Services();
+// print_r($_POST['image']);
+// die;
 try{
     $services->title = $_POST['title'];
 }
@@ -35,7 +37,7 @@ catch(Exception $ex){
 }
 }
 else{
-    $_SESSION ['errors'] = 'Check Your Errors';
+    $_SESSION ['error'] = 'Check Your Errors';
     $_SESSION ['errors'] = $errors;
     header("Location:../admin/services_setting.php");
 }

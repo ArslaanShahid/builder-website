@@ -23,7 +23,7 @@ require_once 'views/navbar.php';
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Add User to Website</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Add Employee</h1>
                                  <span class="text-success">
 
                                 <?php
@@ -40,29 +40,29 @@ require_once 'views/navbar.php';
                             </div>
                             <form action="/process/process_add_admin.php" class="user" method="post" >
                                 <div class="form-group">
-                                    <input type="username" class="form-control form-control-user"
-                                        id="username" aria-describedby="username" name="username"
-                                        placeholder="Enter Username...">
+                                    <input type="username" class="form-select form-control"
+                                        id="username" aria-describedby="username" name="name"
+                                        placeholder="Enter Name...">
                                         <span class="text-danger">  
                                             <?php
-                                                if (isset($errors['username'])) {
-                                                    echo ($errors['username']);
+                                                if (isset($errors['name'])) {
+                                                    echo ($errors['name']);
                                                 }
                                                 ?></span>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user"
-                                        id="email" placeholder="Enter email" name="email"> 
+                                    <input type="email" class="form-select form-control"
+                                        id="address" placeholder="Enter address" name="address"> 
                                         <span class="text-danger">  
                                             <?php
-                                                if (isset($errors['email'])) {
-                                                    echo ($errors['email']);
+                                                if (isset($errors['address'])) {
+                                                    echo ($errors['address']);
                                                 }
                                                 ?></span>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-user"
-                                        id="exampleInputPassword" placeholder="Password" name="password" >
+                                    <input type="text" class="form-select form-control"
+                                        id="cnic" placeholder="Enter Cnic" name="cnic">
                                         <span class="text-danger">  
                                             <?php
                                                 if (isset($errors['password'])) {
@@ -71,12 +71,22 @@ require_once 'views/navbar.php';
                                                 ?></span>
                                 </div>
                                 <div class="form-group">
-                                    <div class="custom-control custom-checkbox small">
-                                        
-                                    </div>
+                                <select class="form-select form-control">
+                                        <option selected>Please Select Gender</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                        </select>
+                                        <span class="text-danger">  
+                                            <?php
+                                                if (isset($errors['password'])) {
+                                                    echo ($errors['password']);
+                                                }
+                                                ?></span>
                                 </div>
+                                
+                                
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    Add Admin
+                                    Add Employee
                                 </button>
                                 <hr>
                                

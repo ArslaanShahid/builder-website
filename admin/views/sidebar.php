@@ -88,7 +88,7 @@
                 </a>
                 <div id="collapseemp" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="add_admin.php">Add Employee</a>
+                        <a class="collapse-item" href="add_employee.php">Add Employee</a>
                         <a class="collapse-item" href="manage_admin.php">Manage Employee</a>
                        
                     </div>
