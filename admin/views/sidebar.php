@@ -82,6 +82,19 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseservices" aria-expanded="true" aria-controls="collapsemenu">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Manage Services</span>
+                </a>
+                <div id="collapseservices" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="add_Services.php">Add Services</a>
+                        <a class="collapse-item" href="services_setting.php">Update Services</a>
+                       
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseemp" aria-expanded="true" aria-controls="collapseemp">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Manage Employee</span>
