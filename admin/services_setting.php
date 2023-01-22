@@ -36,7 +36,7 @@ require_once 'views/navbar.php';
                                         }
                                         ?>
                                 </div>
-                                <form action="../process/process_update_services_setting.php" class="user" method="post" autocomplete="off">
+                                <form action="../process/process_update_services_setting.php" class="user" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user" id="title" name="title" placeholder="Enter Title">
                                         <span class="text-danger">  
@@ -57,11 +57,11 @@ require_once 'views/navbar.php';
                                                 ?></span>
                                 </div>
                                 <div class="form-group">
-                                        <input type="file" class="form-control-user" id="image" name="image">
+                                        <input type="file" class="form-control-user" id="servicesimage" name="servicesimage">
                                         <span class="text-danger">  
                                             <?php
-                                                if (isset($errors['image'])) {
-                                                    echo ($errors['image']);
+                                                if (isset($errors['serviceImage'])) {
+                                                    echo ($errors['serviceImage']);
                                                 }
                                                 ?></span>
                                 </div>

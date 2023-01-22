@@ -23,7 +23,7 @@ require_once 'views/navbar.php';
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Add Employee</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Add Services</h1>
                                  <span class="text-success">
 
                                 <?php
@@ -38,55 +38,43 @@ require_once 'views/navbar.php';
                         ?>
                                 </span>
                             </div>
-                            <form action="/process/process_add_employee.php" class="user" method="post" >
+                            <form action="/process/process_add_services.php" class="user" method="post" enctype="multipart/form-data" >
                                 <div class="form-group">
-                                    <input type="username" class="form-select form-control"
-                                        id="username" aria-describedby="username" name="name"
-                                        placeholder="Enter Name...">
+                                    <input type="text" class="form-select form-control"
+                                        id="title" aria-describedby="username" name="title"
+                                        placeholder="Enter Name of the Service">
                                         <span class="text-danger">  
                                             <?php
-                                                if (isset($errors['name'])) {
-                                                    echo ($errors['name']);
+                                                if (isset($errors['title'])) {
+                                                    echo ($errors['title']);
                                                 }
                                                 ?></span>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-select form-control"
-                                        id="email" placeholder="Enter address" name="email"> 
+                                    <input type="text" class="form-select form-control"
+                                        id="description" placeholder="Enter Description of the Service" name="description"> 
                                         <span class="text-danger">  
                                             <?php
-                                                if (isset($errors['email'])) {
-                                                    echo ($errors['email']);
+                                                if (isset($errors['description'])) {
+                                                    echo ($errors['description']);
                                                 }
                                                 ?></span>
-                                </div>
-                                <div class="form-group">
-                                    <input type="number" class="form-select form-control"
-                                        id="cnic" placeholder="Enter Cnic" name="cnic">
-                                        <span class="text-danger">  
-                                            <?php
-                                                if (isset($errors['cnic'])) {
-                                                    echo ($errors['cnic']);
-                                                }
-                                                ?></span>
-                                </div>
-                                <div class="form-group">
-                                <select class="form-select form-control" id="gender" name="gender">
-                                        <option selected>Please Select Gender</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        </select>
-                                        <span class="text-danger">  
-                                            <?php
-                                                if (isset($errors['gender'])) {
-                                                    echo ($errors['gender']);
-                                                }
-                                                ?></span>
-                                </div>
+                                </div>                                
                                 
+                                <div class="form-group">
+                                    <input type="file" class="form-select form-control"
+                                        id="serviceImage" name="serviceImage" > 
+                                        <span class="text-danger">  
+                                            <?php
+                                                if (isset($errors['serviceImage'])) {
+                                                    echo ($errors['serviceImage']);
+                                                }
+                                                ?>
+                                        </span>
+                                </div>  
                                 
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    Add Employee
+                                    Add Service
                                 </button>
                                 <hr>
                                

@@ -3,8 +3,16 @@ session_start();
 require_once '../models/Services.php';
 $errors =[];
 $services = new Services();
-// print_r($_POST['image']);
-// die;
+
+// // print_r($_FILES["servicesimage"]); 
+// $fileName = $_FILES["servicesimage"]["name"];
+// $temp = $_FILES["servicesimage"]["tmp_name"];
+// $folder = "../img/".$fileName;
+// move_uploaded_file($temp, $folder);
+// // print_r();
+// die("sss");
+
+
 try{
     $services->title = $_POST['title'];
 }

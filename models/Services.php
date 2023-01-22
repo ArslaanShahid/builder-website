@@ -40,7 +40,7 @@ private function setID($id){
         {
             if(empty($title)){
 
-                throw new Exception("Invalid / Missing Title");
+                throw new Exception("Enter Service Title");
             }
         }
         $this->title = $title;   
@@ -50,9 +50,8 @@ private function setID($id){
     }
     private function setDescription($description)
     {
-        $reg = "/([a-zA-Z]+\s?$)/";
-        if (!preg_match($reg, $description)) {
-            throw new Exception("Name Should be in Capital or Small Letters");
+        if (empty($description)) { 
+            throw new Exception("Please Enter Service Description");
         } 
         $this->description = $description;
     }
@@ -61,22 +60,7 @@ private function setID($id){
         return $this->description;
     }
 
-
-    public function add_services()
-    {
-        $obj_db = self::obj_db();
-        $query = " INSERT into services "
-            . "(`id` , `title` , `description`) "
-            . " values "
-            . "(NULL , '$this->title' , '$this->description', '$this->image') ";
-
-            $obj_db->query($query);
-
-        if ($obj_db->errno) {
-            throw new Exception("Query Insert Error" . $obj_db->errno . $obj_db->error);
-        }
-    }
-    private function setProfile_image($ServiceImage) {
+    private function setServiceImage($ServiceImage) {
         //$_FILES['profileImage'] - $profileImage;
 //        echo("<pre>");
 //        print_r($profileImage);
@@ -112,32 +96,35 @@ private function setID($id){
 //        die;
 //
         $fileName = $this->title . ".jpg";
-//        echo($_SERVER['DOCUMENT_ROOT']);
-//        die;
-        $strPath = $_SERVER['DOCUMENT_ROOT'] . "/builder-website/images/users/$this->title/$fileName";
-//        echo($strPath);
-//        die;
-
-        if (!is_dir($_SERVER['DOCUMENT_ROOT'] . "/paptech/images/users")) {
-            if (!mkdir($_SERVER['DOCUMENT_ROOT'] . "/paptech/images/users")) {
-                throw new Exception("Faield to creat folder users");
-            }
-        }
-        if (!is_dir($_SERVER['DOCUMENT_ROOT'] . "/paptech/images/users/$this->title")) {
-            if (!mkdir($_SERVER['DOCUMENT_ROOT'] . "/paptech/images/users/$this->title")) {
-                throw new Exception("Faield to creat folder users/$this->title");
-            }
-        }
+    //    echo($_SERVER['DOCUMENT_ROOT']);
+    //    die;
+        $strPath = $_SERVER['DOCUMENT_ROOT'] . "/img/$fileName";
+    //    echo($strPath);
+    //    die;
         $result = move_uploaded_file($ServiceImage['tmp_name'], $strPath);
+        // print_r($result);
+        // die;
         if (!$result) {
             throw new Exception("Failed to move file");
         }
-        $query = "update userprofiles set "
-                . " profile_image = '$fileName' "
-                . " where user_id = '$this->user_id'";
-        $objDB = self::obj_db();
-        $result = $objDB->query($query);
     }
+
+    public function add_services()
+    {
+        $obj_db = self::obj_db();
+        $query = " INSERT into services "
+            . "(`id` , `title` , `description`) "
+            . " values "
+            . "(NULL , '$this->title' , '$this->description') ";
+
+        $obj_db->query($query);
+        // print_r($obj_db);
+        // die;
+        if ($obj_db->errno) {
+            throw new Exception("Query Insert Error" . $obj_db->errno . $obj_db->error);
+        }
+    }
+
 
 
 
