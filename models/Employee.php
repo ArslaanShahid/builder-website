@@ -1,5 +1,7 @@
 <?php
+
 require_once 'DbTrait.php';
+
 class Employee
 {
     use DbTrait;
@@ -115,6 +117,42 @@ class Employee
             throw new Exception("Query Insert Error" . $obj_db->errno . $obj_db->error);
         }
     }
+    public static function GetEmployee(){
+        $obj_db = self::obj_db();
+        $query_Emp = "SELECT * from employees";
+        $result =$obj_db->query($query_Emp);
+        // print_r($obj_db);
+        // die;
+    if($obj_db->errno){
+        throw new Exception("Unable to Select ".$obj_db->errno. $obj_db->error);
+    }
+    while($data= $result->fetch_object()){
+            $employees[] = $data;
+    }
+    return $employees;
+}
+public static function GetEmployeeByCode($employeeCode){
+    $obj_db = self::obj_db();
+    $query_Emp = "SELECT * from employees where employeeCode = $employeeCode";
+    $result = $obj_db->query($query_Emp);
+
+    if ($obj_db->errno) {
+        throw new Exception("Unable to select employee: " . $obj_db->errno . " " . $obj_db->error);
+    }
+
+    if ($result->num_rows == 0) {
+        return false; // employee not found
+    }
+
+    $employees = array();
+
+    while ($data = $result->fetch_object()) {
+        $employees['employees'] = $data;
+    }
+
+    return $employees;
+}
+
 
     // public static function show_Admin(){
     //     $obj_db = self::obj_db();

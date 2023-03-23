@@ -89,5 +89,26 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="../admin/js/toastr.min.js"></script>
+
+<script>
+    toastr.options.closeButton = true;
+    toastr.options.preventDuplicate = true;
+    toastr.options.progressBar = true;
+    <?php
+    if (isset($_SESSION['success'])) {
+        echo ("toastr.success('" . $_SESSION['success'] . "')");
+        unset($_SESSION['success']);
+    }
+    if (isset($_SESSION['error'])) {
+        echo ("toastr.error('" . $_SESSION['error'] . "')");
+        unset($_SESSION['error']);
+    }
+    if (isset($_SESSION['info'])) {
+        echo ("toastr.info('" . $_SESSION['info'] . "')");
+        unset($_SESSION['info']);
+    }
+    ?>
+</script>
     </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'views/header.php'
 ?>
 <!-- Page Header Start -->
@@ -20,23 +21,45 @@ require_once 'views/header.php'
 <div class="team">
     <div class="container">
         <div class="section-header text-center">
-            <p>                    Please Enter 5 Digit Code to Generate Certificate
-</p>
+            <p> Please Enter 5 Digit Code to Generate Certificate
+            </p>
         </div>
         <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="newsletter">
-                <div class="form">
-                    <input class="form-control" type="number" placeholder="Enter 5 Digit Code">
-                    <center>
-                        <button class="col-md-5 btn btn-danger mt-3">Verify</button>
+            <div class="col-md-6">
+                <div class="text-center">
+                    <h1 class="h6 text-danger mb-4">
 
-                    </center>
+                        <?php
+                        if (isset($_SESSION['msg'])) {
+                            echo ($_SESSION['msg']);
+                            unset($_SESSION['msg']);
+                        }
+                        if (isset($_SESSION['errors'])) {
+                            $errors = $_SESSION['errors'];
+                            unset($_SESSION['errors']);
+                        }
+                        ?>
+
+                    </h1>
+                </div>
+                <div class="newsletter">
+                    <form action="process/process_certificate.php?" method="GET">
+                        <input class="form-control" name="code" id="code" type="number" placeholder="Enter 5 Digit Code">
+                        <span class="text-danger col-md-4">
+                            <?php
+                            if (isset($errors['code'])) {
+                                echo ($errors['code']);
+                            }
+                            ?></span>
+                        <center>
+                            <button type="submit" class="col-md-5 btn btn-danger mt-3">Verify</button>
+                        </center>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+</div>
 </div>
 
 

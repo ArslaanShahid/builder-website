@@ -1,3 +1,12 @@
+<?php
+require_once './models/Setting.php';
+
+$result = Setting::show_header_info();
+
+
+
+?>
+
 <html>
 <head>
         <meta charset="utf-8">
@@ -21,6 +30,8 @@
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/slick/slick.css" rel="stylesheet">
         <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -48,7 +59,8 @@
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 8:00 - 9:00</p>
+                                            <p><?php foreach ($result as $data)
+    echo($data->opening_hours)?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +71,9 @@
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Call Us</h3>
-                                            <p>+012 345 6789</p>
+                                            <p><?php foreach ($result as $data){
+    echo($data->phone);
+} ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +84,8 @@
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Email Us</h3>
-                                            <p>info@example.com</p>
+                                            <p><?php foreach ($result as $data)
+    echo($data->email)?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +107,7 @@
                                 <a href="index.php" class="nav-item nav-link active">Home</a>
                                 <a href="about.php" class="nav-item nav-link">About</a>
                                 <a href="service.php" class="nav-item nav-link">Service</a>
-                                <a href="team.html" class="nav-item nav-link">Team</a>
+                                <a href="../employee_checker.php" class="nav-item nav-link">Employee Verify</a>
                                 <a href="portfolio.html" class="nav-item nav-link">Project</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
