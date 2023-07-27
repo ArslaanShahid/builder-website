@@ -168,14 +168,14 @@ private function setID($id){
         // print_r($obj_db);
         // die;
         if ($obj_db->errno) {
-            throw new Exception("Query Insert Error" . $obj_db->errno . $obj_db->error);
+            throw new Exception("Query Select Error" . $obj_db->errno . $obj_db->error);
         }
     
     if($result->num_rows==0){
         throw new Exception ("Info Not Found");
     }
     while($data = $result->fetch_object()){ 
-        $info[] = $data;
+        $info['footer'] = $data;
     }
     return $info;
 

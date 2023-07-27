@@ -121,6 +121,19 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsejobs" aria-expanded="true" aria-controls="collapseemp">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Manage Jobs Listing</span>
+                </a>
+                <div id="collapsejobs" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="add_job.php">Add Jobs</a>
+                        <a class="collapse-item" href="manage_resume.php">View Resume</a>
+                       
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecontact" aria-expanded="true" aria-controls="collapsecontact">
                     <i class="fas fa-fw fa-comments"></i>
                     <span>User's Queries</span>

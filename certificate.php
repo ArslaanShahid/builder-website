@@ -25,10 +25,7 @@ $result = Employee::GetEmployeeByCode($code);
             ?></p>
             <div class="certificate-content">
                 <div class="about-certificate">
-                    <p>
-                    For His outstanding completion of the compulsory
-internship program at BuildNew Construction Company from
-July to December 2022.
+                    <p>For His outstanding completion of the compulsory internship program at BuildNew Construction Company from July to December 2022.
                 </p>
                 </div>
                 <p class="topic-title">

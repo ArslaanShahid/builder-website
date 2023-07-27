@@ -152,6 +152,20 @@ public static function GetEmployeeByCode($employeeCode){
 
     return $employees;
 }
+public function add_job(){
+    $obj_db = self::obj_db();
+    $query_job = "INSERT into jobs"
+        ."(`id`, `title`, `date`)"
+        ."(NULL, $this->title, $this->date)";
+
+        $obj_db->query($query_job);
+        // print_r($query_admin);
+        // die;
+        if ($obj_db->errno) {
+            throw new Exception("Query Insert Error" . $obj_db->errno . $obj_db->error);
+        }
+}
+
 
 
     // public static function show_Admin(){

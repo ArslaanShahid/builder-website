@@ -18,31 +18,28 @@ require_once 'views/navbar.php';
                     <tr>
                         <th>No</th>
                         <th>Name</th>
-                        <th>Email</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <?php
                 $i = 1;
-                $quotes = Admin::show_Admin();
+                $admins = Admin::show_Admin();
                 // echo("<pre>");
                 // print_r($quotes);
                 // echo ("</pre>");
                 // die;
-                foreach ($quotes as $quote){
+                foreach ($admins as $admin){
                     echo("<tr>");
                     echo("<td>".$i ."</td>");
-                    echo("<td>". $quote->username ."</td>");
-                    echo("<td>". $quote->email ."</td>");
-                    if($quote->status == 1){
+                    echo("<td>". $admin->username ."</td>");
+                    if($admin->status == 1){
                         echo("<td class='badge rounded-pill bg-success text-white offset-4'>Active</td>");
                     }
                     else
-                    echo("<td>Not Active</td>");
+                    echo "<span class='badge rounded-pill bg-danger text-white'>Inactive</span>";
 
-                    echo("<td><a href='process/process_delete_quote.php?id=".$quote->id."' class='text-danger offset-4 fa fa-trash'</td>");
-
+                    echo("<td><a href='process/process_delete_quote.php?id=".$admin->id."' class='text-danger offset-4 fa fa-trash'</td>");
                 }
                 ?>
                 <tbody>
@@ -55,7 +52,7 @@ require_once 'views/navbar.php';
 
 </div>
 
-            </div>
+</div>
 
 
 

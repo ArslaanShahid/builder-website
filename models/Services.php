@@ -94,7 +94,7 @@ private function setID($id){
             throw new Exception("Corrupt Image");
         }
 //        die;
-//
+//      
         $fileName = $this->title . ".jpg";
     //    echo($_SERVER['DOCUMENT_ROOT']);
     //    die;
@@ -124,25 +124,23 @@ private function setID($id){
             throw new Exception("Query Insert Error" . $obj_db->errno . $obj_db->error);
         }
     }
+    public static function show_services(){
+        $obj_db = self::obj_db();
+        $query_admin = "SELECT * FROM services";
+       $result= $obj_db->query($query_admin);
+        // print_r($obj_db);
+        // die;
+        if ($obj_db->errno) {
+            throw new Exception("Query Select Error" . $obj_db->errno . $obj_db->error);
+        }
+    
+    if($result->num_rows==0){
+        throw new Exception ("Services Not Found");
+    }
+    while($data = $result->fetch_object()){ 
+        $services[] = $data;
+    }
+    return $services;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+ }
+    }

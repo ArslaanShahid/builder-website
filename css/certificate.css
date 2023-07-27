@@ -7,7 +7,7 @@ body {
     width: 1024px;
 }
 .certificate {
-    border: 20px solid #0C5280;
+    border: 20px solid #f16625;
     padding: 25px;
     height: 600px;
     position: relative;
@@ -42,7 +42,7 @@ h1 {
 
     font-weight: 400;
     font-size: 48px;
-    color: #0C5280;
+    color: #3f3f3f;
 }
 
 .student-name {
