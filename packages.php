@@ -10,7 +10,7 @@ require_once 'views/header.php'
                         </div>
                         <div class="col-12">
                             <a href="">Home</a>
-                            <a href="">Our Projects</a>
+                            <a href="">Our Packages</a>
                         </div>
                     </div>
                 </div>
@@ -22,14 +22,13 @@ require_once 'views/header.php'
             <div class="portfolio">
                 <div class="container">
                     <div class="section-header text-center">
-                        <p>Our Projects</p>
-                        <h2>Visit Our Projects</h2>
+                        <p>Our Packages</p>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <ul id="portfolio-flters">
                                 <li data-filter="*" class="filter-active">All</li>
-                                <li data-filter=".first">Complete</li>
+                                <li data-filter=".first">Gra</li>
                                 <li data-filter=".second">Running</li>
                                 <li data-filter=".third">Upcoming</li>
                             </ul>
@@ -141,11 +140,7 @@ require_once 'views/header.php'
                     </div>
                     <div class="card">
 </div>
-                    <div class="row">
-                        <div class="col-12 load-more">
-                            <a class="btn" href="#">Load More</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <!-- Portfolio End -->
