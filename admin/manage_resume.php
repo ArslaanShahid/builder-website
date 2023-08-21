@@ -15,41 +15,45 @@ $resumes = $job->getAllUserResumes($resumeDirectory);
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Resume Details</h6>
-    </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Resume </th>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Resume Details</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Resume </th>
 
-                        
-                    </tr>
-                </thead>
-                <?php
-                foreach ($resumes as $resume) {
-                    
-                    // Wrap the name in an anchor tag and output the clickable name within a table row
-                    echo "<tr>";
-                    echo "<td>".$resume['name']. "</td>";
-                    echo "<td>".$resume['phone']. "</td>";
-                    echo "<td><a href='/uploads/" . $resume['resume_name'] . "' download>" . $resume['resume_name'] . "</a></td>";
-                    echo "</tr>";
-                }
-                
-                ?>
-                <tbody>
-                    
-                </tbody>
-            </table>
+
+                        </tr>
+                    </thead>
+                    <?php
+                    foreach ($resumes as $resume) {
+
+                        // Wrap the name in an anchor tag and output the clickable name within a table row
+                        echo "<tr>";
+                        echo "<td>" . $resume['name'] . "</td>";
+                        echo "<td>" . $resume['phone'] . "</td>";
+                        echo "<td>" . $resume['email'] . "</td>";
+                        echo "<td>" . $resume['msg'] . "</td>";
+                        echo "<td><a href='/uploads/" . $resume['resume_name'] . "' download>" . $resume['resume_name'] . "</a></td>";
+                        echo "</tr>";
+                    }
+
+                    ?>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 
 </div>
 

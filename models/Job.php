@@ -180,7 +180,7 @@ class Job
         $obj_db = self::obj_db();
 
         // Construct and execute the query
-        $query = "SELECT `name`, `phone`, `resume_name` FROM resumes";
+        $query = "SELECT * FROM resumes";
         $result = $obj_db->query($query);
 
         // Check for errors during the database operation
