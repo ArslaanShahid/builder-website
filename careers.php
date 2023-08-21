@@ -49,10 +49,16 @@ require_once 'views/header.php'
               <input class="form-control" type='number' name="phone" id="phone" placeholder="Enter Your Phone #">
             </div>
             <div class="form-group">
+              <input class="form-control" type='email' name="email" id="email" placeholder="Enter Your Email ID">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type='text' name="msg" id="msg" placeholder="Enter Your Message" autocomplete="false">
+            </div>
+            <div class="form-group">
               <input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
             </div>
             <div class="form-group">
-              <input class="col-md-5 btn btn-danger mt-3" type="submit" value="Upload File" name="submit">
+              <input class="col-md-5 btn btn-success mt-3" type="submit" value="Send" name="submit">
             </div>
           </form>
         </div>
