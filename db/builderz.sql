@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 20, 2022 at 12:54 PM
+-- Generation Time: Aug 24, 2023 at 11:26 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -45,15 +45,118 @@ INSERT INTO `admins` (`id`, `username`, `status`, `date`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `employees`
+--
+
+CREATE TABLE `employees` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `cnic` varchar(255) NOT NULL,
+  `joiningDate` date NOT NULL,
+  `employeeCode` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employees`
+--
+
+INSERT INTO `employees` (`id`, `name`, `gender`, `email`, `cnic`, `joiningDate`, `employeeCode`) VALUES
+(1, 'Taimoor', 'female', 'dymib@mailinator.com', '47', '2023-01-17', 65494),
+(2, 'vuxezisysa', 'female', 'zekyrabo@mailinator.com', '86', '2023-01-17', 37410),
+(3, 'lupaxa', 'male', 'qefy@mailinator.com', '87', '2023-01-17', 29450),
+(4, 'pixovelo', 'female', 'rofebys@mailinator.com', '52', '2023-01-17', 56473),
+(5, 'mezameroji', 'female', 'pokijowo@mailinator.com', '9', '2023-01-17', 41659),
+(6, 'gawetiwo', 'male', 'pypa@mailinator.com', '53', '2023-01-17', 26983),
+(7, 'vetyzik', 'male', 'fonizuxyv@mailinator.com', '55', '2023-01-17', 14022);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobs`
+--
+
+CREATE TABLE `jobs` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `title`, `date`, `status`) VALUES
+(1, 'Magni fugit labore ', '1988-02-15', 1),
+(2, 'Software Engineer', '2023-07-15', 1),
+(3, 'Digital Marketing', '2023-07-15', 1),
+(4, 'Civil Engineer', '2023-08-22', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `packages`
+--
+
+CREATE TABLE `packages` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resumes`
+--
+
+CREATE TABLE `resumes` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `resume_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `msg` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `resumes`
+--
+
+INSERT INTO `resumes` (`id`, `name`, `date`, `phone`, `resume_name`, `email`, `msg`) VALUES
+(1, 'Chaim Stewart', '2023-07-27', '46', 'Arslan_Shahid_Resume.pdf', 'arslan@yahoo.com', 'hello'),
+(2, 'Arslan Shahid', '2023-08-16', '03237553458', 'Assessment - open book exam - CSC- 40054(3).pdf', 'arslan@yahoo.com', 'hello'),
+(3, 'lyftron', '2023-08-16', '03237553458', 'ADP-Transcript.pdf', 'hello@yahoo.com', 'hello'),
+(4, 'Taimoor Shahzad', '2023-08-21', '03237553458', 'Taimoor-Shahzad_resume.pdf', 'arslan@yahoo.com', 'hello'),
+(5, 'Brooke Burke', '2023-08-21', '29', 'ADP-Transcript.pdf', 'vyzyn@mailinator.com', 'Asperiores omnis pro'),
+(6, 'Lavinia Berg', '2023-08-21', '55', 'ADP-Transcript.pdf', 'ralejux@mailinator.com', 'Neque aut in cumque ');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `services`
 --
 
 CREATE TABLE `services` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `image` blob NOT NULL
+  `description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `title`, `description`) VALUES
+(1, 'Test', 'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test '),
+(2, 'Ahmad', 'ahmad'),
+(3, 'test', 'test'),
+(4, 'test', 'test'),
+(7, 'Real Estate', 'Real Estate'),
+(8, 'Faizan', 'Faizan');
 
 -- --------------------------------------------------------
 
@@ -65,15 +168,17 @@ CREATE TABLE `settings` (
   `id` int(11) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `opening_hours` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `about_us` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `phone`, `opening_hours`, `email`) VALUES
-(1, '+1 (661) 218-1643', 'Et ea aute aliquid u', 'nugumo@mailinator.com');
+INSERT INTO `settings` (`id`, `phone`, `opening_hours`, `email`, `location`, `about_us`) VALUES
+(1, '+1 (517) 642-2824', 'Voluptatibus quaerat', 'gajiqewy@mailinator.com', 'Ajwa City, Gujranwala', 'New Builld CC is a versatile New Builld CC is a versatile constuction company constuction New Builld CC is a versatile constuction company company New New Builld CC is a versatile constuction company Builld CC is a  New Builld CC is a versatile constuction company versatile constuction company New Builld CC is a versatile constuction company');
 
 --
 -- Indexes for dumped tables
@@ -83,6 +188,30 @@ INSERT INTO `settings` (`id`, `phone`, `opening_hours`, `email`) VALUES
 -- Indexes for table `admins`
 --
 ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `employees`
+--
+ALTER TABLE `employees`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `jobs`
+--
+ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `packages`
+--
+ALTER TABLE `packages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resumes`
+--
+ALTER TABLE `resumes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -108,10 +237,34 @@ ALTER TABLE `admins`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `employees`
+--
+ALTER TABLE `employees`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `jobs`
+--
+ALTER TABLE `jobs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `packages`
+--
+ALTER TABLE `packages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `resumes`
+--
+ALTER TABLE `resumes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `settings`
