@@ -189,28 +189,14 @@ $services = Services::show_services();
 <!-- Service Start -->
 <div class="service">
     <div class="container">
-        <div class="section-header text-center">
-            <p>Our Services</p>
-            <h2>We Provide Services</h2>
-        </div>
         <div class="row">
-            <?php foreach ($services as $service) : ?>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/<?php echo $service->title; ?>.jpg" alt="<?php echo $service->title; ?>">
-                            <div class="service-overlay">
-                                <p><?php echo $service->description; ?></p>
-                            </div>
-                        </div>
-                        <div class="service-text">
-                            <h3><?php echo $service->title; ?></h3>
-                            <a class="btn" href="img/<?php echo $service->title; ?>.jpg" data-lightbox="service">+</a>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-
+            <div class="section-header text-center">
+                <p>Our Services</p>
+                <h2>We Provide Services</h2>
+            </div>
+            <div class="row" id="servicesList">
+                <!-- Services will be dynamically populated here -->
+            </div>
         </div>
         <!-- Service End -->
     </div>
@@ -536,7 +522,37 @@ $services = Services::show_services();
 </div>
 
 
-
+</div>
 <?php
 require_once 'views/footer.php'
 ?>
+<script>
+    fetch('http://builder-website.test/process/process_get_services.php')
+        .then(response => response.json())
+        .then(services => {
+            const servicesList = document.getElementById('servicesList');
+
+            services.forEach(service => {
+                const listItem = document.createElement('div');
+                listItem.classList.add('col-lg-4', 'col-md-6', 'wow', 'fadeInUp');
+                listItem.setAttribute('data-wow-delay', '0.2s');
+
+                const serviceItem = document.createElement('div');
+                serviceItem.classList.add('service-item');
+
+                const serviceText = document.createElement('div');
+                serviceText.classList.add('service-text');
+
+                const serviceName = document.createElement('h3');
+                serviceName.textContent = service.service_name; // Assuming service_name is the field name
+
+                serviceText.appendChild(serviceName);
+                serviceItem.appendChild(serviceText);
+                listItem.appendChild(serviceItem);
+                servicesList.appendChild(listItem);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching services:', error);
+        });
+</script>
