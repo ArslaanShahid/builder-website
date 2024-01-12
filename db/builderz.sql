@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 24, 2023 at 11:26 AM
+-- Generation Time: Jan 12, 2024 at 06:18 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -142,21 +142,26 @@ INSERT INTO `resumes` (`id`, `name`, `date`, `phone`, `resume_name`, `email`, `m
 
 CREATE TABLE `services` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL
+  `service_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`id`, `title`, `description`) VALUES
-(1, 'Test', 'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test '),
-(2, 'Ahmad', 'ahmad'),
-(3, 'test', 'test'),
-(4, 'test', 'test'),
-(7, 'Real Estate', 'Real Estate'),
-(8, 'Faizan', 'Faizan');
+INSERT INTO `services` (`id`, `service_name`) VALUES
+(9, 'PROJECT MANAGEMENT'),
+(10, 'ENGINEERING'),
+(11, 'CIVIL CONSTRUCTION WORK'),
+(12, 'BUILDING WORK'),
+(13, 'ROAD & INFRASTRUCTURE WORK'),
+(14, 'ARCHITECTURAL WORK'),
+(15, 'PROCUREMENT'),
+(16, 'E & I INSTALLATION'),
+(17, 'OPERATION & MAINTENANCE'),
+(18, 'SECURITY FENCE'),
+(19, 'TRADING MATERIAL WORK'),
+(20, 'MANPOWER');
 
 -- --------------------------------------------------------
 
@@ -264,7 +269,7 @@ ALTER TABLE `resumes`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `settings`
