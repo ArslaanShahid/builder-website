@@ -2,9 +2,7 @@
 require_once './models/Setting.php';
 $result = Setting::show_header_info();
 ?>
-
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Builderz - Construction Company Website</title>
@@ -42,52 +40,49 @@ $result = Setting::show_header_info();
     <div class="wrapper">
         <!-- Top Bar Start -->
         <div class="top-bar">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="logo">
-                            <a href="index.html">
-                                <h1>Builderz</h1>
-                                <!-- <img src="img/logo.jpg" alt="Logo"> -->
-                            </a>
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <h1>Builderz</h1>
+                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="top-bar-item">
-                                    <div class="top-bar-icon">
-                                        <i class="flaticon-calendar"></i>
-                                    </div>
-                                    <div class="top-bar-text">
-                                        <h3>Opening Hour</h3>
-                                        <p><?php foreach ($result as $data)
-                                                echo ($data->opening_hours) ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="top-bar-item">
-                                    <div class="top-bar-icon">
-                                        <i class="flaticon-call"></i>
-                                    </div>
-                                    <div class="top-bar-text">
-                                        <h3>Call Us</h3>
-                                        <p><?php foreach ($result as $data) {
-                                                echo ($data->phone);
-                                            } ?></p>
+                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-calendar"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Opening Hour</h3>
+                                            <p>Mon - Fri, 8:00 - 9:00</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="top-bar-item">
-                                    <div class="top-bar-icon">
-                                        <i class="flaticon-send-mail"></i>
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-call"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Call Us</h3>
+                                            <p>+012 345 6789</p>
+                                        </div>
                                     </div>
-                                    <div class="top-bar-text">
-                                        <h3>Email Us</h3>
-                                        <p><?php foreach ($result as $data)
-                                                echo ($data->email) ?></p>
+                                </div>
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-send-mail"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Email Us</h3>
+                                            <p>info@example.com</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +90,8 @@ $result = Setting::show_header_info();
                     </div>
                 </div>
             </div>
-        </div>
+
+        
         <div class="nav-bar">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -115,6 +111,12 @@ $result = Setting::show_header_info();
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
+                    <div class="ml-auto">
+                                <a class="btn" href="#">Get A Quote</a>
+                            </div>
                 </nav>
             </div>
         </div>
+        
+        
+        

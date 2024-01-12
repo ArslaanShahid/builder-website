@@ -132,7 +132,7 @@ class Services
     public static function show_services()
     {
         $obj_db = self::obj_db();
-        $query_admin = "SELECT * FROM services";
+        $query_admin = "SELECT name,description FROM services";
         $result = $obj_db->query($query_admin);
         // print_r($obj_db);
         // die;

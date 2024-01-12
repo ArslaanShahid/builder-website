@@ -59,10 +59,10 @@ $setting = Setting::show_footer_info();
             </div>
         </div>
     </div>
-</div>
 <!-- Footer End -->
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+</div>
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
