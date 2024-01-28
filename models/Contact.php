@@ -23,5 +23,16 @@ class Contact{
         }
     return true;
     }
-    
+    public static function Show_Queries(){
+        $obj_db= self::obj_db();
+        $query = "SELECT * FROM queries";
+        $result = $obj_db->query($query);
+        if($obj_db->errno){
+            throw new Exception("Unable to Select ".$obj_db->errno. $obj_db->error);
+        }
+        while($data= $result->fetch_object()){
+                $queries[] = $data;
+        }
+        return $queries;
+    }
 }

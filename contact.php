@@ -111,7 +111,7 @@ function submitForm() {
 }
 
 </script>
-            <?php
+<?php
 require_once 'views/footer.php'
 
 ?>
