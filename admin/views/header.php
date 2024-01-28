@@ -1,9 +1,6 @@
-
 <?php
-
 session_start();
 require_once '../models/Admin.php';
-
 define('BASE_FOLDER','/admin/');
 define('BASE_URL','http://'.$_SERVER['HTTP_HOST'].BASE_FOLDER);
 
@@ -18,8 +15,21 @@ $public_pages = [
     BASE_FOLDER."login.php",
 ];
 $restricted_pages = [
+    BASE_FOLDER."about_us_page_setting.php",
+    BASE_FOLDER."add_admin.php",
+    BASE_FOLDER."add_job.php",
+    BASE_FOLDER."add_Employee.php",
+    BASE_FOLDER."add_projects.php",
+    BASE_FOLDER."add_Services.php",
+    BASE_FOLDER."footer_setting.php",
+    BASE_FOLDER."header_setting.php",
+    BASE_FOLDER."manage_admin.php",
+    BASE_FOLDER."manage_emp.php",
+    BASE_FOLDER."manage_quote.php",
+    BASE_FOLDER."manage_resume.php",
     BASE_FOLDER."index.php",
-    BASE_FOLDER."index.php",
+
+
 ];
 $current = $_SERVER['PHP_SELF'];
 
@@ -47,7 +57,7 @@ if(in_array($current,$public_pages) && $obj_admin->loggedin) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Graduate Student</title>
+    <title>Builder Admin Panel</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

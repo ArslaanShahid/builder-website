@@ -1,5 +1,5 @@
 <?php
-require_once'../models/Employee.php';
+require_once '../models/Employee.php';
 require_once 'views/header.php';
 require_once 'views/sidebar.php';
 require_once 'views/navbar.php';

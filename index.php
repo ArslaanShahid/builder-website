@@ -527,32 +527,55 @@ $services = Services::show_services();
 require_once 'views/footer.php'
 ?>
 <script>
-    fetch('http://builder-website.test/process/process_get_services.php')
-        .then(response => response.json())
-        .then(services => {
-            const servicesList = document.getElementById('servicesList');
+fetch('http://builder-website.test/process/process_get_services.php')
+    .then(response => response.json())
+    .then(services => {
+        const servicesList = document.getElementById('servicesList');
 
-            services.forEach(service => {
-                const listItem = document.createElement('div');
-                listItem.classList.add('col-lg-4', 'col-md-6', 'wow', 'fadeInUp');
-                listItem.setAttribute('data-wow-delay', '0.2s');
+        services.forEach(service => {
+            const listItem = document.createElement('div');
+            listItem.classList.add('col-lg-4', 'col-md-6', 'wow', 'fadeInUp');
+            listItem.setAttribute('data-wow-delay', '0.2s');
 
-                const serviceItem = document.createElement('div');
-                serviceItem.classList.add('service-item');
+            const serviceItem = document.createElement('div');
+            serviceItem.classList.add('service-item');
 
-                const serviceText = document.createElement('div');
-                serviceText.classList.add('service-text');
+            const serviceBox = document.createElement('div');
+            serviceBox.classList.add('service-box');
 
-                const serviceName = document.createElement('h3');
-                serviceName.textContent = service.service_name; // Assuming service_name is the field name
+            // Create an h3 element for the heading
+            const serviceName = document.createElement('h4');
+            serviceName.style.fontSize = '15px';
+            serviceName.style.color = '#fdbe33';
+            serviceName.style.fontWeight = 'bold';
+            serviceName.textContent = service.name; //SERVICE NAME FROM API RESPONSE
+            serviceName.style.backgroundColor = '#030f27';
+            serviceName.style.padding = '20px';
 
-                serviceText.appendChild(serviceName);
-                serviceItem.appendChild(serviceText);
-                listItem.appendChild(serviceItem);
-                servicesList.appendChild(listItem);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching services:', error);
+            // Create a p element for the description
+            const serviceDescription = document.createElement('p');
+            serviceDescription.style.fontSize = '14px'; // Adjust as needed
+            
+            serviceDescription.textContent = service.description; // Assuming description is the field name
+            serviceDescription.style.color = 'black';
+
+            // Append the heading to the serviceBox container
+            serviceBox.appendChild(serviceName);
+
+            // Append the description to the serviceBox container
+            serviceBox.appendChild(serviceDescription);
+
+            // Append the serviceBox container to the serviceItem container
+            serviceItem.appendChild(serviceBox);
+
+            // Append the serviceItem container to the listItem container
+            listItem.appendChild(serviceItem);
+
+            // Append the listItem container to the servicesList container
+            servicesList.appendChild(listItem);
         });
+    })
+    .catch(error => {
+        console.error('Error fetching services:', error);
+    });
 </script>

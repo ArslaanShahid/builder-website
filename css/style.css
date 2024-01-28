@@ -221,6 +221,7 @@ a:focus {
     
     .nav-bar .navbar {
         padding: 20px;
+        height: 90px;
     }
     
     .nav-bar .navbar-brand {
