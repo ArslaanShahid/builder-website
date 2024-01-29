@@ -59,7 +59,7 @@ $result = Setting::show_header_info();
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 8:00 - 9:00</p>
+                                            <p>Mon - Friday, 8:00 - 9:00</p>
                                         </div>
                                     </div>
                                 </div>
