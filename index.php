@@ -527,7 +527,7 @@ $services = Services::show_services();
 require_once 'views/footer.php'
 ?>
 <script>
-fetch('http://builder-website.test/process/process_get_services.php')
+fetch('https:/process/process_get_services.php')
     .then(response => response.json())
     .then(services => {
         const servicesList = document.getElementById('servicesList');
