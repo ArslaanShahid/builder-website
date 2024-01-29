@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/buildnew/public_html/
+    - /bin/cp -R images $DEPLOYPATH
