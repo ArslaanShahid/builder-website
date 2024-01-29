@@ -5,9 +5,9 @@ trait DbTrait {
 
     protected static function obj_db(){
         $host = "localhost";
-        $user = "root";
-        $password = "";
-        $database = "builderz";
+        $user = "buildnew_root";
+        $password = "buildnew_builderz";
+        $database = "buildnew_builderz";
 
         $obj_db = new mysqli();
         $obj_db->connect($host, $user, $password);
