@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-tasks"></i>
                 </div>
@@ -39,6 +39,7 @@
                         <a class="collapse-item" href="footer_setting.php">Footer Setting</a>
                         <a class="collapse-item" href="about_us_page_setting.php">About Us Page Setting</a>
                         <a class="collapse-item" href="services_setting.php">Services Setting</a>
+                        <a class="collapse-item" href="database_backup.php">Database Backup</a>
 
                     </div>
                 </div>

@@ -242,11 +242,11 @@ $services = Services::show_services();
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team-1.jpg" alt="Team Image">
+                        <img src="img/team/IMG-20240127-WA0010.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Adam Phillips</h2>
-                        <p>CEO & Founder</p>
+                        <h2>Engineer Taimoor Shahzad</h2>
+                        <p>CEO</p>
                     </div>
                     <div class="team-social">
                         <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
@@ -259,11 +259,11 @@ $services = Services::show_services();
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team-2.jpg" alt="Team Image">
+                        <img src="img/team/director.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
                         <h2>Dylan Adams</h2>
-                        <p>Civil Engineer</p>
+                        <p>Director</p>
                     </div>
                     <div class="team-social">
                         <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
@@ -276,7 +276,7 @@ $services = Services::show_services();
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team-3.jpg" alt="Team Image">
+                        <img src="img/team/marketing-manager.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
                         <h2>Jhon Doe</h2>
@@ -293,7 +293,7 @@ $services = Services::show_services();
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team-4.jpg" alt="Team Image">
+                        <img src="img/team/construction-manager.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
                         <h2>Josh Dunn</h2>
