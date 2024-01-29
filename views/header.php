@@ -108,12 +108,10 @@ $result = Setting::show_header_info();
                             <a href="../careers.php" class="nav-item nav-link">Careers</a>
                             <a href="../employee_checker.php" class="nav-item nav-link">Employee Verify</a>
                             <a href="portfolio.php" class="nav-item nav-link">Project</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="contact.php" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
-                    <div class="ml-auto">
-                                <a class="btn" href="#">Get A Quote</a>
-                            </div>
+            
                 </nav>
             </div>
         </div>
