@@ -70,7 +70,7 @@ $services = Services::show_services();
                     </div>
                     <div class="feature-text">
                         <h3>Expert Worker</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        <p>Bringing years of experience and expertise to deliver exceptional results. Dedication and skill define our approach to every task.</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@ $services = Services::show_services();
                     </div>
                     <div class="feature-text">
                         <h3>Quality Work</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        <p>Our commitment to excellence ensures that every project is completed with the utmost precision and attention to detail, guaranteeing high-quality outcomes.</p>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@ $services = Services::show_services();
                     </div>
                     <div class="feature-text">
                         <h3>24/7 Support</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        <p>Our dedicated support team is available around the clock, 24/7, to assist you with any inquiries or issues. We prioritize providing timely and reliable support to ensure your peace of mind at all times.</p>
                     </div>
                 </div>
             </div>
@@ -117,12 +117,11 @@ $services = Services::show_services();
                     <h2>25 Years Experience</h2>
                 </div>
                 <div class="about-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                    </p>
-                    <p>
+                <p>With a rich history spanning 25 years, Builderz is your seasoned partner in crafting exceptional spaces. Our expertise goes beyond construction; we are dedicated to turning your vision into reality. At Builderz, we understand that every project is unique, and we take pride in delivering tailored solutions that exceed expectations.</p>
+
+                    <!-- <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
-                    </p>
+                    </p> -->
                     <a class="btn" href="">Learn More</a>
                 </div>
             </div>
