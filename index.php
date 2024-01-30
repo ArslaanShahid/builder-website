@@ -242,7 +242,7 @@ $services = Services::show_services();
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team/IMG-20240127-WA0010.jpg" alt="Team Image">
+                        <img src="img/team/ceo.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
                         <h2>Engineer Taimoor Shahzad</h2>
@@ -472,7 +472,7 @@ $services = Services::show_services();
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12">
                 <div class="testimonial-slider">
                     <div class="slider-item">
@@ -516,7 +516,7 @@ $services = Services::show_services();
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

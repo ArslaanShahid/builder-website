@@ -94,6 +94,3 @@
             console.error('Error fetching services:', error);
         });
 </script>
-
-<!-- Link your JavaScript file if needed -->
-<script src="path/to/your/scripts.js"></script>
