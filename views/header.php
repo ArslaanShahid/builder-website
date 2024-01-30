@@ -5,7 +5,7 @@ $result = Setting::show_header_info();
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Builderz - Construction Company Website</title>
+    <title>Builderz</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Construction Company Website Template" name="keywords">
     <meta content="Construction Company Website Template" name="description">
@@ -44,7 +44,7 @@ $result = Setting::show_header_info();
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-md-12">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <h1>Builderz</h1>
                                     <!-- <img src="img/logo.jpg" alt="Logo"> -->
                                 </a>
