@@ -244,7 +244,7 @@ $services = Services::show_services();
                         <img src="img/team/ceo.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Engineer Taimoor Shahzad</h2>
+                        <h2>Eng.Taimoor Shahzad</h2>
                         <p>CEO</p>
                     </div>
                     <div class="team-social">
@@ -261,7 +261,7 @@ $services = Services::show_services();
                         <img src="img/team/director.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Dylan Adams</h2>
+                        <h2>Umer Mushtaq</h2>
                         <p>Director</p>
                     </div>
                     <div class="team-social">
@@ -278,8 +278,8 @@ $services = Services::show_services();
                         <img src="img/team/marketing-manager.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Jhon Doe</h2>
-                        <p>Interior Designer</p>
+                        <h2>Usama Khalid</h2>
+                        <p>Marketing Manager</p>
                     </div>
                     <div class="team-social">
                         <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
@@ -295,8 +295,8 @@ $services = Services::show_services();
                         <img src="img/team/construction-manager.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Josh Dunn</h2>
-                        <p>Painter</p>
+                        <h2>Eng. Zahid Imran</h2>
+                        <p>Construction Manager</p>
                     </div>
                     <div class="team-social">
                         <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
