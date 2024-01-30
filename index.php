@@ -70,7 +70,7 @@ $services = Services::show_services();
                     </div>
                     <div class="feature-text">
                         <h3>Expert Worker</h3>
-                        <p>With a wealth of experience and specialized expertise, our team is committed to delivering nothing short of exceptional results. At the core of our work is a profound dedication, where skill meets passion, defining our approach to every task. We take pride in transforming visions into reality, ensuring each project reflects the pinnacle of craftsmanship.</p>
+                        <p>With a wealth of experience and specialized expertise, our team is committed to delivering nothing short of exceptional results. At the core of our work is a profound dedication, where skill meets passion, defining our approach to every task. We take pride in transforming visions into reality.</p>
                     </div>
                 </div>
             </div>
