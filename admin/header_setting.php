@@ -1,5 +1,4 @@
 <?php
-require_once './init.php';
 require_once 'views/header.php';
 require_once 'views/sidebar.php';
 require_once 'views/navbar.php';
@@ -36,7 +35,7 @@ require_once 'views/navbar.php';
                                         }
                                         ?>
                                 </div>
-                                <form action="../process/process_update_website_setting.php" class="user" method="post">
+                                <form action="../process/process_update_website_setting.php" id='' class="user" method="post">
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user" id="email" aria-describedby="email" name="email" placeholder="Enter Email">
                                         <span class="text-danger">  

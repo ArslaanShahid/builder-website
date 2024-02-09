@@ -153,7 +153,7 @@ class Setting
             throw new Exception("Info Not Found");
         }
         while ($data = $result->fetch_object()) {
-            $info[] = $data;
+            $info['header_info'] = $data;
         }
         return $info;
     }

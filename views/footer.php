@@ -25,7 +25,7 @@ $setting = Setting::show_footer_info();
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-5">
+            <!-- <div class="col-md-6 col-lg-5">
                 <div class="footer-link">
                     <h2>Services Areas</h2>
                     <a href="">Building Construction</a>
@@ -34,15 +34,12 @@ $setting = Setting::show_footer_info();
                     <a href="">Interior Design</a>
                     <a href="">Painting</a>
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-6 col-lg-2">
                 <div class="footer-link">
-                    <h2>Useful Pages</h2>
-                    <a href="">About Us</a>
-                    <a href="">Contact Us</a>
-                    <a href="">Our Team</a>
-                    <a href="">Projects</a>
-                    <a href="">Testimonial</a>
+                    <h2>Footer Links</h2>
+                    <a href="../about.php">About Us</a>
+                    <a href="../contact.php">Contact Us</a>
                 </div>
             </div>
 
@@ -52,7 +49,7 @@ $setting = Setting::show_footer_info();
     <div class="container copyright">
         <div class="row">
             <div class="col-md-6">
-                <p>&copy; <a href="#">New Builderz LTD</a>, All Right Reserved.</p>
+                <p>&copy; <a href="#">BuildNewLLC</a>, All Right Reserved.</p>
             </div>
             <div class="col-md-6">
                 <p>Designed By <a href="www.techcodex.net">TechCodeX</a></p>

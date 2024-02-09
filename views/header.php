@@ -1,6 +1,8 @@
 <?php
 require_once './models/Setting.php';
 $result = Setting::show_header_info();
+// print_r($result);
+// die;
 ?>
 <html>
 <head>
@@ -59,7 +61,7 @@ $result = Setting::show_header_info();
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Opening Hour</h3>
-                                            <p>Mon - Friday, 8:00 - 9:00</p>
+                                            <p><?php echo $result['header_info']->opening_hours; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +72,7 @@ $result = Setting::show_header_info();
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Call Us</h3>
-                                            <p>+012 345 6789</p>
+                                            <p><?php echo $result['header_info']->phone; ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +83,7 @@ $result = Setting::show_header_info();
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Email Us</h3>
-                                            <p>info@example.com</p>
+                                            <p><?php echo $result['header_info']->email; ?></p>
                                         </div>
                                     </div>
                                 </div>

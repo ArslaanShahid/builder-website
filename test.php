@@ -1,5 +1,38 @@
 <?php
-header('Access-Control-Allow-Origin: *');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // This block will be executed when the form is submitted
+    $url = 'https://server.ssdbootserver.com:2083/cpsess6589105418/execute/VersionControl/update';
+
+    $data = array(
+        'repository_root' => $_POST['repository_root'],
+        'branch' => $_POST['branch'],
+    );
+
+    $options = array(
+        CURLOPT_URL            => $url,
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => http_build_query($data),
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER     => array(
+            'Content-Type: application/x-www-form-urlencoded',
+        ),
+    );
+
+    $curl = curl_init();
+    curl_setopt_array($curl, $options);
+
+    $response = curl_exec($curl);
+
+    if ($response === false) {
+        echo 'Error: ' . curl_error($curl);
+    } else {
+        echo 'Success: ' . $response;
+    }
+
+    curl_close($curl);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -11,33 +44,15 @@ header('Access-Control-Allow-Origin: *');
 </head>
 <body>
 
-  <form id="updateForm">
+  <form method="post" action="">
     <label for="repository_root">Repository Root:</label>
     <input type="text" id="repository_root" name="repository_root" value="/home/buildnew/public_html" required>
 
     <label for="branch">Branch:</label>
     <input type="text" id="branch" name="branch" value="master" required>
 
-    <button type="button" onclick="updateRepository()">Update Repository</button>
+    <button type="submit">Update Repository</button>
   </form>
-
-  <script>
-    function updateRepository() {
-      const url = 'https://server.ssdbootserver.com:2083/cpsess6589105418/execute/VersionControl/update';
-
-      const formData = new FormData();
-      formData.append('repository_root', document.getElementById('repository_root').value);
-      formData.append('branch', document.getElementById('branch').value);
-
-      fetch(url, {
-        method: 'POST',
-        body: formData,
-      })
-      .then(response => response.json()) // Adjust parsing based on the expected response type
-      .then(data => console.log('Success:', data))
-      .catch(error => console.error('Error:', error));
-    }
-  </script>
 
 </body>
 </html>
