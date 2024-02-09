@@ -70,7 +70,7 @@ $services = Services::show_services();
                     </div>
                     <div class="feature-text">
                         <h3>Expert Worker</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        <p>With a wealth of experience and specialized expertise, our team is committed to delivering nothing short of exceptional results. At the core of our work is a profound dedication.</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@ $services = Services::show_services();
                     </div>
                     <div class="feature-text">
                         <h3>Quality Work</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        <p>Our commitment to excellence ensures that every project is completed with the utmost precision and attention to detail, guaranteeing high-quality outcomes.</p>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@ $services = Services::show_services();
                     </div>
                     <div class="feature-text">
                         <h3>24/7 Support</h3>
-                        <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        <p>Our dedicated support team is available around the clock, 24/7, to assist you with any inquiries or issues. We prioritize providing timely and reliable support to ensure your peace of mind at all times.</p>
                     </div>
                 </div>
             </div>
@@ -117,12 +117,11 @@ $services = Services::show_services();
                     <h2>25 Years Experience</h2>
                 </div>
                 <div class="about-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                    </p>
-                    <p>
+                <p>With a rich history spanning 25 years, Builderz is your seasoned partner in crafting exceptional spaces. Our expertise goes beyond construction; we are dedicated to turning your vision into reality. At Builderz, we understand that every project is unique, and we take pride in delivering tailored solutions that exceed expectations.</p>
+
+                    <!-- <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
-                    </p>
+                    </p> -->
                     <a class="btn" href="">Learn More</a>
                 </div>
             </div>
@@ -242,10 +241,10 @@ $services = Services::show_services();
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item">
                     <div class="team-img">
-                        <img src="img/team/IMG-20240127-WA0010.jpg" alt="Team Image">
+                        <img src="img/team/ceo.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Engineer Taimoor Shahzad</h2>
+                        <h2>Eng.Taimoor Shahzad</h2>
                         <p>CEO</p>
                     </div>
                     <div class="team-social">
@@ -262,7 +261,7 @@ $services = Services::show_services();
                         <img src="img/team/director.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Dylan Adams</h2>
+                        <h2>Umer Mushtaq</h2>
                         <p>Director</p>
                     </div>
                     <div class="team-social">
@@ -279,8 +278,8 @@ $services = Services::show_services();
                         <img src="img/team/marketing-manager.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Jhon Doe</h2>
-                        <p>Interior Designer</p>
+                        <h2>Usama Khalid</h2>
+                        <p>Marketing Manager</p>
                     </div>
                     <div class="team-social">
                         <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
@@ -296,8 +295,8 @@ $services = Services::show_services();
                         <img src="img/team/construction-manager.jpg" alt="Team Image">
                     </div>
                     <div class="team-text">
-                        <h2>Josh Dunn</h2>
-                        <p>Painter</p>
+                        <h2>Eng. Zahid Imran</h2>
+                        <p>Construction Manager</p>
                     </div>
                     <div class="team-social">
                         <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
@@ -472,7 +471,7 @@ $services = Services::show_services();
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12">
                 <div class="testimonial-slider">
                     <div class="slider-item">
@@ -516,7 +515,7 @@ $services = Services::show_services();
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

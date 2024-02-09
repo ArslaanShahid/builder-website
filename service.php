@@ -38,7 +38,7 @@
 
 <!-- JavaScript to fetch services and populate the list -->
 <script>
-    fetch('http://builder-website.test/process/process_get_services.php')
+    fetch('process/process_get_services.php')
         .then(response => response.json())
         .then(services => {
             const servicesList = document.getElementById('servicesList');
@@ -94,6 +94,3 @@
             console.error('Error fetching services:', error);
         });
 </script>
-
-<!-- Link your JavaScript file if needed -->
-<script src="path/to/your/scripts.js"></script>

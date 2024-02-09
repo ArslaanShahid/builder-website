@@ -35,11 +35,11 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="header_setting.php">Header Setting</a>
-                        <a class="collapse-item" href="footer_setting.php">Footer Setting</a>
-                        <a class="collapse-item" href="about_us_page_setting.php">About Us Page Setting</a>
-                        <a class="collapse-item" href="services_setting.php">Services Setting</a>
-                        <a class="collapse-item" href="database_backup.php">Database Backup</a>
+                        <a class="collapse-item" href="../header_setting.php">Header Setting</a>
+                        <a class="collapse-item" href="../footer_setting.php">Footer Setting</a>
+                        <a class="collapse-item" href="../about_us_page_setting.php">About Us Page Setting</a>
+                        <a class="collapse-item" href="../services_setting.php">Services Setting</a>
+                        <a class="collapse-item" href="../database_backup.php">Database Backup</a>
 
                     </div>
                 </div>
