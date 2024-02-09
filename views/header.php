@@ -7,7 +7,7 @@ $result = Setting::show_header_info();
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Builderz</title>
+    <title>Build New LLC</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Construction Company Website Template" name="keywords">
     <meta content="Construction Company Website Template" name="description">

@@ -19,13 +19,9 @@
 <!-- Service Start -->
 <div class="service">
     <div class="container">
-        <div class="section-header text-center">
-            <p>Our Services</p>
-            <h2>We Provide Services</h2>
-        </div>
         <div class="row" id="servicesList">
             <!-- Placeholder text or loading indicator can be added here -->
-            <p>Loading services...</p>
+            <!-- <p>Loading services...</p> -->
         </div>
     </div>
 </div>
@@ -33,64 +29,57 @@
 <!-- Footer Start -->
 <?php require_once 'views/footer.php'; ?>
 
-<!-- Link your CSS file -->
-<link rel="stylesheet" href="path/to/your/styles.css">
-
 <!-- JavaScript to fetch services and populate the list -->
 <script>
-    fetch('process/process_get_services.php')
-        .then(response => response.json())
-        .then(services => {
-            const servicesList = document.getElementById('servicesList');
-            servicesList.innerHTML = ''; // Clear the placeholder text or loading indicator
+fetch('process/process_get_services.php')
+    .then(response => response.json())
+    .then(services => {
+        const servicesList = document.getElementById('servicesList');
 
-            services.forEach(service => {
-                const listItem = document.createElement('div');
-                listItem.classList.add('col-lg-4', 'col-md-6', 'wow', 'fadeInUp');
-                listItem.setAttribute('data-wow-delay', '0.1s');
+        services.forEach(service => {
+            const listItem = document.createElement('div');
+            listItem.classList.add('col-lg-4', 'col-md-6', 'wow', 'fadeInUp');
+            listItem.setAttribute('data-wow-delay', '0.2s');
 
-                const serviceItem = document.createElement('div');
-                serviceItem.classList.add('service-item');
+            const serviceItem = document.createElement('div');
+            serviceItem.classList.add('service-item');
 
-                const serviceImg = document.createElement('div');
-                serviceImg.classList.add('service-img');
+            const serviceBox = document.createElement('div');
+            serviceBox.classList.add('service-box');
 
-                const img = document.createElement('img');
-                img.src = service.image; // Assuming 'image' is the field name for the image source
-                img.alt = 'Service Image';
+            // Create an h3 element for the heading
+            const serviceName = document.createElement('h4');
+            serviceName.style.fontSize = '15px';
+            serviceName.style.color = '#fdbe33';
+            serviceName.style.fontWeight = 'bold';
+            serviceName.textContent = service.name; //SERVICE NAME FROM API RESPONSE
+            serviceName.style.backgroundColor = '#030f27';
+            serviceName.style.padding = '20px';
 
-                const serviceOverlay = document.createElement('div');
-                serviceOverlay.classList.add('service-overlay');
+            // Create a p element for the description
+            const serviceDescription = document.createElement('p');
+            serviceDescription.style.fontSize = '14px'; // Adjust as needed
+            
+            serviceDescription.textContent = service.description; // Assuming description is the field name
+            serviceDescription.style.color = 'black';
 
-                const description = document.createElement('p');
-                description.textContent = service.description;
+            // Append the heading to the serviceBox container
+            serviceBox.appendChild(serviceName);
 
-                serviceOverlay.appendChild(description);
-                serviceImg.appendChild(img);
-                serviceImg.appendChild(serviceOverlay);
+            // Append the description to the serviceBox container
+            serviceBox.appendChild(serviceDescription);
 
-                const serviceText = document.createElement('div');
-                serviceText.classList.add('service-text');
+            // Append the serviceBox container to the serviceItem container
+            serviceItem.appendChild(serviceBox);
 
-                const serviceName = document.createElement('h3');
-                serviceName.textContent = service.name;
+            // Append the serviceItem container to the listItem container
+            listItem.appendChild(serviceItem);
 
-                const lightboxLink = document.createElement('a');
-                lightboxLink.classList.add('btn');
-                lightboxLink.href = service.image; // Assuming 'image' is the field name for the image source
-                lightboxLink.setAttribute('data-lightbox', 'service');
-                lightboxLink.textContent = '+';
-
-                serviceText.appendChild(serviceName);
-                serviceText.appendChild(lightboxLink);
-
-                serviceItem.appendChild(serviceText);
-
-                listItem.appendChild(serviceItem);
-                servicesList.appendChild(listItem);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching services:', error);
+            // Append the listItem container to the servicesList container
+            servicesList.appendChild(listItem);
         });
+    })
+    .catch(error => {
+        console.error('Error fetching services:', error);
+    });
 </script>

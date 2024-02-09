@@ -24,7 +24,7 @@ $services = Services::show_services();
             <div class="carousel-caption">
                 <p class="animated fadeInRight">We Are Professional</p>
                 <h1 class="animated fadeInLeft">For Your Dream Project</h1>
-                <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>
+                <!-- <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a> -->
             </div>
         </div>
 
@@ -33,7 +33,7 @@ $services = Services::show_services();
             <div class="carousel-caption">
                 <p class="animated fadeInRight">Professional Builder</p>
                 <h1 class="animated fadeInLeft">We Build Your Home</h1>
-                <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>
+                <!-- <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a> -->
             </div>
         </div>
 
@@ -42,7 +42,6 @@ $services = Services::show_services();
             <div class="carousel-caption">
                 <p class="animated fadeInRight">We Are Trusted</p>
                 <h1 class="animated fadeInLeft">For Your Dream Home</h1>
-                <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>
             </div>
         </div>
     </div>
@@ -234,8 +233,8 @@ $services = Services::show_services();
 <div class="team">
     <div class="container">
         <div class="section-header text-center">
-            <p>Our Team</p>
-            <h2>Meet Our Engineer</h2>
+            <!-- <p>Our Team</p> -->
+            <h2>Our Team</h2>
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -313,7 +312,7 @@ $services = Services::show_services();
 
 
 <!-- FAQs Start -->
-<div class="faqs">
+<!-- <div class="faqs">
     <div class="container">
         <div class="section-header text-center">
             <p>Frequently Asked Question</p>
@@ -451,7 +450,7 @@ $services = Services::show_services();
         </div>
     </div>
 </div>
-<!-- FAQs End -->
+FAQs End -->
 
 
 <!-- Testimonial Start -->
