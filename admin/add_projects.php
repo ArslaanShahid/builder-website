@@ -79,6 +79,17 @@ require_once 'views/navbar.php';
                                             </span>
                                         </div>
                                         <div class="form-group">
+                                            <label for="link">Image Link</label>
+                                            <input type="url" class="form-control" id="url" name="url">
+                                            <span class="text-danger">
+                                                <?php
+                                                if (isset($errors['url'])) {
+                                                    echo ($errors['url']);
+                                                }
+                                                ?>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="date_of_start">Start Date:</label>
                                             <input type="date" class="form-control" id="date_of_start" name="date_of_start">
                                             <span class="text-danger">
@@ -155,6 +166,8 @@ require_once 'views/navbar.php';
             const locationInput = document.getElementById('location');
             const dateOfStartInput = document.getElementById('date_of_start');
             const dateOfEndInput = document.getElementById('date_of_end');
+            const url = document.getElementById('url');
+
             const statusInput = document.getElementById('status');
 
             const formData = {
@@ -162,9 +175,11 @@ require_once 'views/navbar.php';
                 client_name: clientNameInput.value,
                 project_type: projectTypeInput.value,
                 location: locationInput.value,
+                url:url.value,
                 date_of_start: dateOfStartInput.value,
                 date_of_end: dateOfEndInput.value,
                 status: statusInput.value,
+                
             };
 
             if (!validateFormData(formData)) {
@@ -201,6 +216,7 @@ require_once 'views/navbar.php';
             // Example: Check if required fields are not empty
             return (
                 formData.name.trim() !== '' &&
+                formData.url.trim() !== '' &&   
                 formData.client_name.trim() !== '' &&
                 formData.project_type.trim() !== '' &&
                 formData.location.trim() !== '' &&

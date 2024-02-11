@@ -13,6 +13,8 @@ class Projects
     private $date_of_start;
     private $date_of_end;
     private $status;
+    private $link;
+
 
     public function __set($name, $value)
     {
@@ -66,6 +68,10 @@ class Projects
     {
         $this->status = $status;
     }
+    private function setLink($link)
+    {
+        $this->link = $link;
+    }
 
     // Getters
     private function getName()
@@ -102,47 +108,69 @@ class Projects
     {
         return $this->status;
     }
-    public function add_project($data){
+    private function getLink()
+    {
+        return $this->link;
+    }
+    public function add_project($data)
+    {
         $obj_db = self::obj_db();
-    
+
         // Check if date_of_start and date_of_end are not null
         if (!empty($data['date_of_start'])) {
             $formattedStartDate = date('Y-m-d', strtotime($data['date_of_start']));
         } else {
             $formattedStartDate = null;
         }
-    
+
         if (!empty($data['date_of_end'])) {
             $formattedEndDate = date('Y-m-d', strtotime($data['date_of_end']));
         } else {
             $formattedEndDate = null;
         }
-    
-        $query = "INSERT INTO projects (name, client_name, project_type, location, date_of_start, date_of_end, status)
+
+        $query = "INSERT INTO projects (name, client_name, project_type, location, link, date_of_start, date_of_end, status)
     VALUES (
       '{$data['name']}',
       '{$data['client_name']}',
       '{$data['project_type']}',
       '{$data['location']}',
+      '{$data['url']}',
       '$formattedStartDate',
       '$formattedEndDate',
       '{$data['status']}'
     )";
 
-    
+
         $obj_db->query($query);
-    
+
         if ($obj_db->errno) {
             throw new Exception("Query Insert Error: " . $obj_db->errno . ' - ' . $obj_db->error);
         }
-    
+
         // Return a success message
         return "Project added successfully!";
     }
-    
+    public static function show_projects()
+    {
+        $obj_db = self::obj_db();
+        $query_admin = "SELECT * FROM projects";
+        $result = $obj_db->query($query_admin);
 
+        if ($obj_db->errno) {
+            throw new Exception("Query Select Error" . $obj_db->errno . $obj_db->error);
+        }
 
+        if ($result->num_rows == 0) {
+            throw new Exception("Projects Not Found");
+        }
 
+        $projects = []; // Initialize an array to store all records
+
+        while ($data = $result->fetch_object()) {
+            $projects['projects'][] = $data; // Append each record to the array
+        }
+
+        return $projects;
+    }
 }
-
-?>
