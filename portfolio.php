@@ -29,15 +29,18 @@ require_once 'views/header.php'
                         <h2>Visit Our Projects</h2>
                     </div>
                     <div class="row">
-                        <div class="col-12">
-                            <ul id="portfolio-flters">
-                                <li data-filter="*" class="filter-active">All</li>
-                                <li data-filter=".first">Complete</li>
-                                <li data-filter=".second">Running</li>
-                                <li data-filter=".third">Upcoming</li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="col-12">
+        <ul id="portfolio-flters">
+            <li data-filter="all" class="filter-active">All</li>
+            <li data-filter="complete">Complete</li>
+            <li data-filter="running">Running</li>
+            <li data-filter="upcoming">Upcoming</li>
+            <li data-filter="hold">hold</li>
+
+        </ul>
+    </div>
+</div>
+
                     <div class="row portfolio-container">
                         <!-- <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                             <div class="portfolio-warp">
@@ -71,6 +74,20 @@ require_once 'views/header.php'
 document.addEventListener('DOMContentLoaded', function () {
     const portfolioContainer = document.querySelector('.portfolio-container');
 
+    // Function to filter projects based on status
+    function filterProjects(status) {
+        const projectItems = portfolioContainer.querySelectorAll('.portfolio-item');
+
+        projectItems.forEach(item => {
+            const itemStatus = item.dataset.status;
+            if (status === 'all' || itemStatus === status) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
     // Fetch project details using AJAX
     fetch('/process/process_get_project.php')
         .then(response => response.json())
@@ -79,8 +96,9 @@ document.addEventListener('DOMContentLoaded', function () {
             data.projects.forEach(project => {
                 // Create project item (similar to the previous code)
                 const projectItem = document.createElement('div');
-                projectItem.classList.add('col-lg-4', 'col-md-6', 'col-sm-12', 'portfolio-item', 'first', 'wow', 'fadeInUp');
+                projectItem.classList.add('col-lg-4', 'col-md-6', 'col-sm-12', 'portfolio-item', 'wow', 'fadeInUp');
                 projectItem.setAttribute('data-wow-delay', '0.1s');
+                projectItem.dataset.status = project.status.toLowerCase(); // Set the status as a data attribute
 
                 const projectWarp = document.createElement('div');
                 projectWarp.classList.add('portfolio-warp');
@@ -122,10 +140,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Append the project item to the portfolio container
                 portfolioContainer.appendChild(projectItem);
             });
+
+            // Initial rendering (show all projects)
+            filterProjects('all');
         })
         .catch(error => console.error('Error fetching projects:', error));
+
+    // Event listener for filter buttons
+    const filterButtons = document.querySelectorAll('#portfolio-flters li');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const status = this.dataset.filter;
+            filterProjects(status);
+        });
+    });
 });
 </script>
+
+
 
 <?php
 require_once 'views/footer.php'
