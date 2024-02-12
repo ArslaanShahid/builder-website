@@ -34,7 +34,6 @@ require_once 'views/header.php'
             <li data-filter="all" class="filter-active">All</li>
             <li data-filter="complete">Complete</li>
             <li data-filter="running">Running</li>
-            <li data-filter="upcoming">Upcoming</li>
             <li data-filter="hold">hold</li>
 
         </ul>
@@ -108,6 +107,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const img = document.createElement('img');
                 img.setAttribute('src', project.link); // Use project.link as the image source
+                img.setAttribute('width', '380'); // Set the desired width
+                img.setAttribute('height', '323'); // Set the desired height
 
                 const projectOverlay = document.createElement('div');
                 projectOverlay.classList.add('portfolio-overlay');
@@ -126,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 linkBtn.setAttribute('href', project.link);
                 linkBtn.setAttribute('data-lightbox', 'portfolio');
                 linkBtn.textContent = '+';
+                linkBtn.style.backgroundColor = '#fdbe33';
 
                 // Append elements
                 projectOverlay.appendChild(overlayText);
