@@ -47,8 +47,8 @@ $result = Setting::show_header_info();
                         <div class="col-lg-4 col-md-12">
                             <div class="logo">
                                 <a href="index.php">
-                                    <h1>Builderz</h1>
                                     <img src="img/logo/build-new-cc.png" alt="Logo">
+                                    <span style="color: black;" class="text-center"><strong>Build New CC PVT LTD</strong></span>
                                 </a>
                             </div>
                         </div>
