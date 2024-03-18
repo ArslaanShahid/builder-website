@@ -4,43 +4,7 @@ $setting = Setting::show_footer_info();
 // print_r($setting['footer']->phone);
 // die;
 ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <div class="footer wow fadeIn" data-wow-delay="0.3s">
     <div class="container">
         <div class="row">
