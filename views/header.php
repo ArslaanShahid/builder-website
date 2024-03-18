@@ -48,7 +48,7 @@ $result = Setting::show_header_info();
                             <div class="logo">
                                 <a href="index.php">
                                     <h1>Builderz</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+                                    <img src="img/logo/build-new-cc.png" alt="Logo">
                                 </a>
                             </div>
                         </div>
