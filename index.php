@@ -141,7 +141,7 @@ $services = Services::show_services();
                             <i class="flaticon-worker"></i>
                         </div>
                         <div class="fact-text">
-                            <h2 data-toggle="counter-up">109</h2>
+                            <h2 data-toggle="counter-up">500+</h2>
                             <p>Expert Workers</p>
                         </div>
                     </div>
@@ -150,7 +150,7 @@ $services = Services::show_services();
                             <i class="flaticon-building"></i>
                         </div>
                         <div class="fact-text">
-                            <h2 data-toggle="counter-up">485</h2>
+                            <h2 data-toggle="counter-up">250</h2>
                             <p>Happy Clients</p>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ $services = Services::show_services();
                             <i class="flaticon-address"></i>
                         </div>
                         <div class="fact-text">
-                            <h2 data-toggle="counter-up">789</h2>
+                            <h2 data-toggle="counter-up">170</h2>
                             <p>Completed Projects</p>
                         </div>
                     </div>
@@ -172,7 +172,7 @@ $services = Services::show_services();
                             <i class="flaticon-crane"></i>
                         </div>
                         <div class="fact-text">
-                            <h2 data-toggle="counter-up">890</h2>
+                            <h2 data-toggle="counter-up">28</h2>
                             <p>Running Projects</p>
                         </div>
                     </div>
