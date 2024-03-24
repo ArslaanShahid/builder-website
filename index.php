@@ -142,7 +142,7 @@ $services = Services::show_services();
                         </div>
                         <div class="fact-text">
                             <h2 data-toggle="counter-up">500</h2>
-                            <p>Expert Workers</p>
+                            <p>Expert Workers </p>
                         </div>
                     </div>
                     <div class="col-6">

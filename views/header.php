@@ -48,7 +48,7 @@ $result = Setting::show_header_info();
                             <div class="logo">
                                 <a href="index.php">
                                     <img src="img/logo/build-new-cc.png" alt="Logo">
-                                    <span style="color: black;" class="text-center"><strong>BuildNew Construction Company PVT.LTD</strong></span>
+                                    <span style="color: black; font-size: smaller;" class="text-center"><strong>BuildNew Construction Company PVT.LTD</strong></span>
                                 </a>
                             </div>
                         </div>
