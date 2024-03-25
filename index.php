@@ -112,15 +112,11 @@ $services = Services::show_services();
             </div>
             <div class="col-lg-7 col-md-6">
                 <div class="section-header text-left">
-                    <p>Welcome to Builderz</p>
+                    <p>Welcome to BuildNewCC</p>
                     <h2>25 Years Experience</h2>
                 </div>
                 <div class="about-text">
-                <p>With a rich history spanning 25 years, Builderz is your seasoned partner in crafting exceptional spaces. Our expertise goes beyond construction; we are dedicated to turning your vision into reality. At Builderz, we understand that every project is unique, and we take pride in delivering tailored solutions that exceed expectations.</p>
-
-                    <!-- <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
-                    </p> -->
+                <p>With a rich history spanning 25 years, BuildNewCC is your seasoned partner in crafting exceptional spaces. Our expertise goes beyond construction; we are dedicated to turning your vision into reality. At BuildNewCC, we understand that every project is unique, and we take pride in delivering tailored solutions that exceed expectations.</p>
                     <a class="btn" href="">Learn More</a>
                 </div>
             </div>
@@ -205,7 +201,7 @@ $services = Services::show_services();
 <!-- Video Start -->
 <div class="video wow fadeIn" data-wow-delay="0.1s">
     <div class="container">
-        <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+        <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=kjRwS-Lg-hY" data-target="#videoModal">
             <span></span>
         </button>
     </div>

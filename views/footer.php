@@ -50,10 +50,10 @@ $setting = Setting::show_footer_info();
     <div class="container copyright">
         <div class="row">
             <div class="col-md-6">
-                <p>&copy; <a href="#">BuildNewLLC</a>, All Right Reserved.</p>
+                <p>&copy; <a href="#">BuildNewCC</a>, All Right Reserved.</p>
             </div>
             <div class="col-md-6">
-                <p>Designed By <a href="www.techcodex.net">TechCodeX</a></p>
+                <p>Designed By<a href="www.techcodex.net">TechCodeX</a></p>
             </div>
         </div>
     </div>
